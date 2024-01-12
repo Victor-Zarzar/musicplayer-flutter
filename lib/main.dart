@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:musicplayer_flutter/pages/home_page.dart';
-import 'package:musicplayer_flutter/themes/light_mode.dart';
+import 'package:musicplayer_flutter/themes/theme_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+        create: (context) => ThemeProvider(), child: const MyApp()),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -14,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: const HomePage(),
-      theme: lightMode,
+      theme: Provider.of<ThemeProvider>(context).ThemeData,
     );
   }
 }
