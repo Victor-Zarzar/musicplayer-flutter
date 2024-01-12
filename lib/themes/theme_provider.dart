@@ -5,13 +5,12 @@ import 'package:musicplayer_flutter/themes/light_mode.dart';
 class ThemeProvider extends ChangeNotifier {
   ThemeData _themeData = lightMode;
 
-  ThemeData get ThemeData => _themeData;
+  ThemeData get themeData => _themeData;
 
   bool get isDarkMode => _themeData == darkMode;
 
   set themeData(ThemeData themeData) {
     _themeData = themeData;
-
     notifyListeners();
   }
 
