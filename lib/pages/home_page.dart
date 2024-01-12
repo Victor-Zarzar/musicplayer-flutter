@@ -6,7 +6,7 @@ import 'package:musicplayer_flutter/pages/song_page.dart';
 import 'package:provider/provider.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  const HomePage({Key? key}) : super(key: key);
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -20,17 +20,17 @@ class _HomePageState extends State<HomePage> {
     super.initState();
 
     playlistProvider = Provider.of<PlaylistProvider>(context, listen: false);
+  }
 
-    void goToSong(int songIndex) {
-      playlistProvider.currentSongIndex = songIndex;
+  void goToSong(int songIndex) {
+    playlistProvider.currentSongIndex = songIndex;
 
-      Navigator.push(
-        context,
-        MaterialPageRoute(
-          builder: (context) => const SongPage(),
-        ),
-      );
-    }
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => const SongPage(),
+      ),
+    );
   }
 
   @override
@@ -51,6 +51,7 @@ class _HomePageState extends State<HomePage> {
               title: Text(song.songName),
               subtitle: Text(song.artistName),
               leading: Image.asset(song.albumArtImagePath),
+              onTap: () => goToSong(index),
             );
           },
         );
