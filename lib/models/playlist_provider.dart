@@ -24,6 +24,26 @@ class PlaylistProvider extends ChangeNotifier {
         artistName: "Pearl Jam",
         albumArtImagePath: "assets/images/ten.jpg",
         audioPath: "audio/Alive.mp3"),
+    Song(
+        songName: "Wake Up Dead",
+        artistName: "Megadeth",
+        albumArtImagePath: "assets/images/megadeth.jpg",
+        audioPath: "audio/ Wake Up Dead.mp3"),
+    Song(
+        songName: "The temple of hate",
+        artistName: "Angra",
+        albumArtImagePath: "assets/images/temple-of-shadows.jpg",
+        audioPath: "audio/Angra - the temple of hate.mp3"),
+    Song(
+        songName: "Piece Of My Heart",
+        artistName: "Janis Joplin",
+        albumArtImagePath: "assets/images/janis.jpg",
+        audioPath: "audio/Piece Of My Heart.mp3"),
+    Song(
+        songName: "The temple of hate",
+        artistName: "Angra",
+        albumArtImagePath: "assets/images/bowie.jpg",
+        audioPath: "audio/Heroes.mp3"),
   ];
 
   int? _currentSongIndex;
