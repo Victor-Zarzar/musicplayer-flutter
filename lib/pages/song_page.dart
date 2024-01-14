@@ -43,8 +43,8 @@ class SongPage extends StatelessWidget {
                         borderRadius: BorderRadius.circular(8),
                         child: Image.asset(currentSong.albumArtImagePath),
                       ),
-                      const Padding(
-                        padding: EdgeInsets.all(15),
+                      Padding(
+                        padding: const EdgeInsets.all(15),
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -52,19 +52,19 @@ class SongPage extends StatelessWidget {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
                                 Text(
-                                  "Children Of The Sea",
-                                  style: TextStyle(
+                                  currentSong.songName,
+                                  style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 25,
                                   ),
                                 ),
                                 Text(
-                                  "Black Sabbath",
-                                  style: TextStyle(fontSize: 15),
+                                  currentSong.artistName,
+                                  style: const TextStyle(fontSize: 15),
                                 )
                               ],
                             ),
-                            Icon(
+                            const Icon(
                               Icons.favorite,
                               color: Colors.red,
                             )
