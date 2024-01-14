@@ -4,7 +4,7 @@ import 'package:musicplayer_flutter/models/playlist_provider.dart';
 import 'package:provider/provider.dart';
 
 class SongPage extends StatelessWidget {
-  const SongPage({Key? key});
+  const SongPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -96,10 +96,13 @@ class SongPage extends StatelessWidget {
                                     enabledThumbRadius: 0)),
                             child: Slider(
                               min: 0,
-                              max: 100,
-                              value: 50,
+                              max: value.totalDuration.inSeconds.toDouble(),
+                              value: value.currentDuration.inSeconds.toDouble(),
                               activeColor: Colors.red,
-                              onChanged: (value) {},
+                              onChanged: (double double) {},
+                              onChangeEnd: (double double) {
+                                value.seek(Duration(seconds: double.toInt()));
+                              },
                             ),
                           )
                         ],
@@ -110,7 +113,7 @@ class SongPage extends StatelessWidget {
                       children: [
                         Expanded(
                           child: GestureDetector(
-                            onTap: () {},
+                            onTap: value.playPreviousSong,
                             child: const NeuBox(
                               child: Icon(Icons.skip_previous),
                             ),
@@ -120,16 +123,18 @@ class SongPage extends StatelessWidget {
                         Expanded(
                           flex: 2,
                           child: GestureDetector(
-                            onTap: () {},
-                            child: const NeuBox(
-                              child: Icon(Icons.play_arrow),
+                            onTap: value.pauseOrResume,
+                            child: NeuBox(
+                              child: Icon(value.isPlaying
+                                  ? Icons.pause
+                                  : Icons.play_arrow),
                             ),
                           ),
                         ),
                         const SizedBox(height: 20),
                         Expanded(
                           child: GestureDetector(
-                            onTap: () {},
+                            onTap: value.playNextSong,
                             child: const NeuBox(
                               child: Icon(Icons.skip_next),
                             ),

@@ -101,6 +101,10 @@ class PlaylistProvider extends ChangeNotifier {
 
   set currentSongIndex(int? newIndex) {
     _currentSongIndex = newIndex;
+
+    if (newIndex != null) {
+      play();
+    }
     notifyListeners();
   }
 
