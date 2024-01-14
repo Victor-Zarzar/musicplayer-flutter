@@ -65,17 +65,38 @@ class SongPage extends StatelessWidget {
                   )
                 ],
               )),
-              const SizedBox(height: 25),
-              const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 25.0),
-                child: Row(
-                  children: [
-                    Text("0:00"),
-                    Icon(Icons.shuffle),
-                    Icon(Icons.repeat),
-                    Text("0:00"),
-                  ],
-                ),
+              const SizedBox(height: 60),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 25.0),
+                    child: Column(
+                      children: [
+                        const Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text("0:00"),
+                            Icon(Icons.shuffle),
+                            Icon(Icons.repeat),
+                            Text("0:00"),
+                          ],
+                        ),
+                        SliderTheme(
+                          data: SliderTheme.of(context).copyWith(
+                              thumbShape: const RoundSliderThumbShape(
+                                  enabledThumbRadius: 0)),
+                          child: Slider(
+                            min: 0,
+                            max: 100,
+                            value: 50,
+                            activeColor: Colors.red,
+                            onChanged: (value) {},
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
               )
             ],
           ),
