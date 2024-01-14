@@ -126,7 +126,7 @@ class SongPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 10),
                         Expanded(
                           flex: 2,
                           child: GestureDetector(
@@ -138,7 +138,7 @@ class SongPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        const SizedBox(height: 20),
+                        const SizedBox(height: 10),
                         Expanded(
                           child: GestureDetector(
                             onTap: value.playNextSong,
