@@ -8,8 +8,12 @@ class SongPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<PlaylistProvider>(
-      builder: (context, value, child) => Scaffold(
+    return Consumer<PlaylistProvider>(builder: (context, value, child) {
+      final playlist = value.playlist;
+
+      final currentSong = playlist[value.currentSongIndex ?? 0];
+
+      return Scaffold(
         backgroundColor: Theme.of(context).colorScheme.background,
         body: SafeArea(
           child: Padding(
@@ -21,7 +25,7 @@ class SongPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () => Navigator.pop(context),
                       icon: const Icon(Icons.arrow_back),
                     ),
                     const Text("P L A Y L I S T"),
@@ -31,12 +35,13 @@ class SongPage extends StatelessWidget {
                     ),
                   ],
                 ),
+                const SizedBox(height: 25),
                 NeuBox(
                   child: Column(
                     children: [
                       ClipRRect(
                         borderRadius: BorderRadius.circular(8),
-                        child: Image.asset("assets/images/heavenandhell.jpg"),
+                        child: Image.asset(currentSong.albumArtImagePath),
                       ),
                       const Padding(
                         padding: EdgeInsets.all(15),
@@ -138,7 +143,7 @@ class SongPage extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
+      );
+    });
   }
 }
