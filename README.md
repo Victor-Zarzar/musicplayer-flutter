@@ -1,16 +1,14 @@
 # Music Player App iOS/Android
 
-## Stack: 
+## Stack:
 
 - Dart
 - Flutter
 
-<h1>Version iOS</h1>
+### Version iOS
 
-<img src="lib/assets/iOS.png" alt="iOS" width="250"/>
+<img src="assets/images/iosmusic.png" alt="iOS Music" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/ios.png" alt="iOS" width="250">
 
-<br> <br>
+### Version Android
 
-<h1>Version Android</h1>
-
-<img src="lib/assets/android.jpg" alt="Android" width="250"/>
+<img src="assets/images/androidmusic.png" alt="Android Music" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/android.png" alt="Android" width="250">
