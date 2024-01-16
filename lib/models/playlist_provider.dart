@@ -40,8 +40,8 @@ class PlaylistProvider extends ChangeNotifier {
         albumArtImagePath: "assets/images/janis.jpg",
         audioPath: "audio/Piece Of My Heart.mp3"),
     Song(
-        songName: "The temple of hate",
-        artistName: "Angra",
+        songName: "Heroes",
+        artistName: "David Bowie",
         albumArtImagePath: "assets/images/bowie.jpg",
         audioPath: "audio/Heroes.mp3"),
   ];
