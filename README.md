@@ -7,7 +7,7 @@
 
 <h1>Version iOS</h1>
 
-<img src="lib/assets/iOS.png" alt="iOS" width="250"/>
+<img src="assets/images/iOS.png" alt="iOS" width="250"/>
 
 <br> <br>
 
