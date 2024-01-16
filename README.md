@@ -7,10 +7,10 @@
 
 <h1>Version iOS</h1>
 
-<img src="lib/assets/iOS.png" alt="iOS" width="250"/>
+<img src="assets/images/iosmusic.png" alt="iOSMusic" width="250">
 
 <br> <br>
 
 <h1>Version Android</h1>
 
-<img src="lib/assets/android.jpg" alt="Android" width="250"/>
+<img src="assets/images/androidmusic.png" alt="AndroidMusic" width="250">
