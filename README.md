@@ -1,16 +1,16 @@
-# musicplayer_flutter
+# Music Player App iOS/Android
 
-A new Flutter project.
+## Stack:
 
-## Getting Started
+- Dart
+- Flutter
+- Provider
+- AudioPlayers 
 
-This project is a starting point for a Flutter application.
+### Version iOS:
 
-A few resources to get you started if this is your first Flutter project:
+<img src="assets/images/iosmusic.png" alt="iOS Music" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/ios.png" alt="iOS" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/iosdrawer.png" alt="iOS" width="250">
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Version Android:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="assets/images/androidmusic.png" alt="Android Music" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/android.png" alt="Android" width="250"> &nbsp; &nbsp; &nbsp; <img src="assets/images/androiddrawer.png" alt="Android" width="250">
