@@ -37,7 +37,10 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.background,
-      appBar: AppBar(title: const Text("P L A Y L I S T")),
+      appBar: AppBar(
+        title: const Text("P L A Y L I S T"),
+        centerTitle: true,
+      ),
       drawer: const MyDrawer(),
       body: Consumer<PlaylistProvider>(builder: (context, value, child) {
         final List<Song> playlist = value.playlist;
