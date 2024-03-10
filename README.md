@@ -1,11 +1,37 @@
-# Music Player App iOS/Android
+<h1 align="center" id="header">
+ Music Player App Flutter
+</h1>
 
-## Stack:
+🤖 Stack:
 
 - Dart
 - Flutter
 - Provider
-- AudioPlayers 
+- AudioPlayers
+
+<br />
+
+⚙️ How to install:
+
+Project Clone
+
+     git clone https://github.com/Victor-Zarzar/musicplayer-flutter
+
+Enter in directory:
+
+     cd musicplayer-flutter
+
+Open in your favorite editor(e.g. VSCode):
+
+    code .
+
+For install dependencies:
+
+    flutter pub get
+
+Run the app:
+   
+    flutter run
 
 ### Version iOS:
 
